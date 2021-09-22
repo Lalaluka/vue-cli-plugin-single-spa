@@ -15,7 +15,7 @@ jobs:
           node-version: "16"
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.15.0
+          version: 5.14.1
       - run: pnpm install --frozen-lockfile
       - run: pnpm run check-format
       - run: pnpm run lint
@@ -30,7 +30,7 @@ jobs:
           node-version: "16"
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.15.0
+          version: 5.14.1
       - run: pnpm add -g @vue/cli
       - run: pnpm install --frozen-lockfile
       - run: pnpm run test:vue2
@@ -45,7 +45,7 @@ jobs:
           node-version: "16"
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.15.0
+          version: 5.14.1
       - run: pnpm add -g @vue/cli
       - run: pnpm install --frozen-lockfile
       - run: pnpm run test:vue3
