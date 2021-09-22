@@ -19,12 +19,12 @@ then
 
   echo $ProjectName
 
-  vue create $ProjectName --no-git --inlinePreset "{\"useConfigFiles\": true,\"plugins\": {},\"vueVersion\": \"$1\"}" --packageManager pnpm || ERRCODE=$?
+  vue create $ProjectName --no-git --inlinePreset "{\"useConfigFiles\": true,\"plugins\": {},\"vueVersion\": \"$1\"}" || ERRCODE=$?
 
   cd $ProjectName
-  pnpm add ../../../ -D || ERRCODE=$?
+  yarn add file:../../../ --dev || ERRCODE=$?
   yes Y | vue invoke single-spa || ERRCODE=$?
-  pnpm run build || ERRCODE=$?
+  yarn run build || ERRCODE=$?
 
   cleanup
   exit $ERRCODE
