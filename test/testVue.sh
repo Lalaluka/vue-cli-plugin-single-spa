@@ -19,7 +19,7 @@ then
 
   echo $ProjectName
 
-  vue create $ProjectName --no-git --inlinePreset "{\"useConfigFiles\": true,\"plugins\": {},\"vueVersion\": \"$1\"}" --packageManager pnpm || ERRCODE=$?
+  vue create $ProjectName --no-git --inlinePreset "{\"useConfigFiles\": true,\"plugins\": {},\"vueVersion\": \"$1\"}" --packageManager pnpm
 
   cd $ProjectName
 
