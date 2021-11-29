@@ -10,7 +10,7 @@ if [ $1 == 2 ] || [ $1 == 3 ];
 then
   ProjectName="test-app-vue$1"
 
-  mkcdir ../test/fixtures
+  mkdir ../test/fixtures
 
   cleanup() (
     cd ..
