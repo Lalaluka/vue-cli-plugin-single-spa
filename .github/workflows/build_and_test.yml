@@ -30,7 +30,7 @@ jobs:
           node-version: "16"
       - uses: pnpm/action-setup@v2.0.1
         with:
-          version: 6.16.0
+          version: 6.23.3
       - run: pnpm add -g @vue/cli
       - run: pnpm install --frozen-lockfile
       - run: pnpm run test
