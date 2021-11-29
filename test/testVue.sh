@@ -24,7 +24,7 @@ then
   cd $ProjectName
   #pnpm add ../../../ -D || ERRCODE=$?
   #yes Y | vue invoke single-spa || ERRCODE=$?
-  #pnpm run build || ERRCODE=$?
+  npm run build || ERRCODE=$?
 
   cleanup
   exit $ERRCODE
